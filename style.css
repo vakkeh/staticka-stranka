@@ -2,6 +2,7 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
 }
 
 .container {
@@ -17,7 +18,8 @@
 	padding: 30px 30px 30px;
 }
 
-.header h1 {
+.header a {
+	text-decoration: none;
 	font-size: 16pt;
 	color: blue;
 }
@@ -37,6 +39,22 @@ span#name {
 	padding-right: 5px;
 	color: black;
 	text-decoration: none;
+}
+
+.page-nav {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.page-nav:hover {
+	color: blue;
+	cursor: pointer;
+}
+
+a.active {
+	color: blue;
 }
 
 .promo-banner {
@@ -73,8 +91,21 @@ span#name {
 
 a#promo-button {
 	cursor: pointer;
-	color: white;
 	text-align: center;
+	color: white;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a#promo-button:hover {
+	color: blue;
+}
+
+a#promo-button:hover div {
+	background-color: white;
 }
 
 a#promo-button div {
@@ -88,10 +119,17 @@ a#promo-button div {
 	padding: 30px 30px 30px;
 }
 
-.intro h2 {
+.intro h1 {
 	font-size: 18pt;
 	font-weight: 600;
 	border-bottom: 5px blue solid;
+	display: inline-block;
+}
+
+.intro h2 {
+	font-size: 16pt;
+	font-weight: 600;
+	border-bottom: 3px blue solid;
 	display: inline-block;
 }
 
@@ -199,10 +237,48 @@ span#work-info {
 }
 
 .form-submit {
-	width: 96%;
 	padding: 0;
 	background-color: white;
 	color: blue;
+}
+
+.gallery:hover {
+	border-bottom: 1px solid blue;
+}
+
+.gallery img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+.responsive {
+	padding: 0 6px;
+	float: left;
+	width: 24.99999%;
+}
+
+.gallery-intro {
+	margin-bottom: 5vh;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+table td, table td * {
+    vertical-align: top;
+}
+
+.services-intro {
+	width: 90%;
+	margin-bottom: 5vh;
 }
 
 @media only screen and (max-width: 600px) {
@@ -212,5 +288,30 @@ span#work-info {
 
   .contact-form {
 	padding-top: 5vh;
+  }
 }
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+
+  table tr {
+    display: block;
+  }
+
+  table tr td {
+    display: block;
+  }
+
+  .services-intro {
+  	width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
 }
