@@ -1,0 +1,15 @@
+@media print {
+
+  body {
+    margin: 0;
+  }
+
+  .links, .promo-banner, .contact-form {
+  	display: none;
+  }
+
+  .contacts, .contacts h2, footer, .contacts-data {
+  	color: black;
+  }
+
+}
